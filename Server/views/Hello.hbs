@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loading...</title>
+    <!-- Header icon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+    <!-- Custom styles for this template -->
+    <link href="css/admin.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $('#splash').ready()
+        {
+            $('#main').load('login');
+            setTimeout(function () {
+                $('#main').ready(function () {
+                    $('#splash').remove();
+                    window.location.href = "login";
+                });
+            }, 1222);
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-primary">
+    <div id="splash">
+        {{!-- <div id="splash" style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 10;"> --}}
+        <!--Put splash here-->
+
+        <h6 style="color:white">Đang tải dữ liệu...</h6>
+
+
+    </div>
+    <div id="main">
+        <!-- keep empty -->
+    </div>
+</body>
+
+</html>
